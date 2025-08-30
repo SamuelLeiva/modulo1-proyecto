@@ -1,68 +1,59 @@
 @import url("main.css");
 
-:root {
-  font-family: var(--font-family);
-}
-
+/*---------------------------------------------- PANTALLAS DE ESCRITORIO ------------------------------------------------------ */
 header {
-  /* background-color: var(--primary-color);*/
-  background-color: rgba(255, 255, 255, 0.3); /* Color semi-transparente */
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(8px);
-  position: fixed; /* deja el header fijo al scrollear */
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
-  color: #333;
-  font-family: "Pacifico", cursive;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 0.625rem 3.125rem; /* 10px y 50px*/
   .logo {
-    grid-column: 1;
-    font-size: 35px;
-    color: #fff;
+    font-family: var(--logo-font);
+    font-size: 2.1875rem; /* 35px*/
+    color: var(--link-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   .navbar {
-    grid-column: 2;
     ul {
       list-style: none;
       display: flex;
       flex-direction: row;
-      justify-content: end;
-      gap: 20px;
-      a {
-        text-decoration: none;
-        font-size: 20px;
-        color: #fff;
-        font-weight: bold; /* El texto en negrita es más visible */
-        transition: color 0.3s ease;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      }
-      a:hover {
-        color: var(--secondary-color);
-      }
+      gap: 1.25rem; /* 20px*/
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.25rem; /* 20px*/
+      color: var(--link-color);
+      font-weight: bold;
+      transition: color 0.3s ease;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    a:hover {
+      color: var(--secondary-color);
     }
   }
 }
 
 #hero {
-  /* Usar background-image para más control */
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  height: 650px;
+  height: 40.625rem; /* 650px*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Asegura que el texto sea blanco para que contraste */
+  color: var(--link-color);
   text-align: center;
-  padding-top: 100px; /* Espacio para que no choque con el header fijo */
+  padding-top: 6.25rem; /* 100px*/
   h2 {
     font-size: 4rem;
     font-weight: bold;
@@ -70,7 +61,7 @@ header {
   }
   p {
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-top: 1.25rem; /* 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   }
 }
@@ -78,42 +69,38 @@ header {
 #features {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 550px);
+  grid-template-rows: auto; /* Usar auto para que la altura dependa del contenido */
   gap: 0;
   .feature-block {
-    display: contents; /* Esto permite que los hijos se coloquen directamente en la cuadrícula */
-  }
-
-  .feature-description {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 2.5rem 2rem;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h3{
-      margin-bottom: 1rem;
+    display: contents;
+    .feature-description {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+      }
     }
-    p{
-      line-height: 1.5;
-    }
-  }
-  .feature-image {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 100%;
+    .feature-image {
       height: 100%;
-      object-fit: cover;
-      display: block;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
     }
   }
 }
@@ -121,55 +108,53 @@ header {
 #testimonials {
   background: var(--secondary-color);
   color: var(--text-color);
-  padding: 60px 0 80px 0;
+  padding: 3.75rem 0 5rem 0; /* 60px y 80px*/
   text-align: center;
   .testimonials-title {
     letter-spacing: 4px;
     color: var(--primary-color);
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 5rem;
   }
   .testimonials-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 2.5rem; /* 40px*/
     flex-wrap: wrap;
     .testimonial {
       background: transparent;
-      max-width: 350px;
-      margin: 0 10px;
+      max-width: 21.875rem; /* 350px*/
+      margin: 0 0.625rem; /* 10px*/
       display: flex;
       flex-direction: column;
       align-items: center;
-
       .testimonial-img {
-        width: 80px;
-        height: 80px;
+        width: 6.25rem; /* 100px*/
+        height: 6.25rem;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 28px;
+        margin-bottom: 1.75rem; /* 28px*/
       }
-
       .testimonial-text {
         color: var(--text-color);
         font-size: 1.15rem;
-        margin-bottom: 32px;
+        margin-bottom: 2rem; /* 32px*/
         line-height: 1.5;
         font-weight: 500;
       }
-
       .testimonial-author {
         .name {
           display: block;
           font-weight: bold;
           font-size: 1.1rem;
-          margin-bottom: 4px;
+          margin-bottom: 0.25rem; /* 4px*/
           color: #222;
         }
         .role {
-          color: #aaa;
+          color: #343030;
           font-size: 0.95rem;
+          font-weight: 700;
         }
       }
     }
@@ -177,7 +162,6 @@ header {
 }
 
 #gallery {
-  background-color: var(--secondary-color);
   padding: 0;
   .gallery-grid {
     display: grid;
@@ -185,50 +169,49 @@ header {
     width: 100%;
     img {
       width: 100%;
-      height: 320px;
+      height: 20rem; /* 320px*/
       object-fit: cover;
       display: block;
       transition: transform 0.3s ease, filter 0.3s ease;
       cursor: pointer;
     }
     img:hover {
-      transform: scale(1.05); /* Ligeramente más grande */
-      filter: brightness(1.2); /* Más brillante */
-      z-index: 10; /* evita que los elementos cercanos la tapen */
+      transform: scale(1.05);
+      filter: brightness(1.2);
+      z-index: 10;
     }
   }
 }
 
 #footer {
   background: var(--primary-color);
-  color: #fff;
-  padding: 60px 0 40px 0;
+  color: var(--link-color);
+  padding: 3.75rem 0 2.5rem 0; /* 60px y 40px*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 2rem; /* 32px*/
   text-align: center;
-  font-family: var(--font-family);
   .footer-logo {
-    color: #fff;
+    color: var(--link-color);
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: "Pacifico", cursive;
+    font-family: var(--logo-font);
   }
   .footer-info {
     p {
-      margin: 5px 0;
+      margin: 0.3125rem 0; /* 5px*/
       font-size: 1rem;
     }
   }
   .footer-nav {
     display: flex;
-    gap: 40px;
+    gap: 2.5rem; /* 40px*/
     flex-wrap: wrap;
     justify-content: center;
     a {
-      color: #fff;
+      color: var(--link-color);
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: 500;
@@ -240,10 +223,10 @@ header {
   }
   .footer-social {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem; /* 24px  */
     img {
-      width: 28px;
-      height: 28px;
+      width: 1.75rem; /* 28px */
+      height: 1.75rem;
       filter: brightness(0) invert(1);
       transition: transform 0.2s;
     }
@@ -252,75 +235,75 @@ header {
       filter: sepia(24%);
     }
   }
-
   .footer-copyright {
-    margin-top: 20px;
+    margin-top: 1.25rem; /* 20px */
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
   }
 }
 
-/* Media queries */
+/* ------------------------------------ MEDIA QUERIES -----------------------------------------*/
+/* PANTALLAS MEDIANAS */
 @media (max-width: 900px) {
   header {
-    grid-template-columns: 1fr 2fr;
-    padding: 8px 20px;
+    padding: 0.5rem 1.25rem;
     .logo {
-      font-size: 28px;
+      font-size: 1.75rem;
     }
     .navbar {
       ul {
-        gap: 12px; /* Espaciado más compacto */
+        gap: 0.75rem;
         a {
-          font-size: 18px;
-          margin-right: 12px;
+          font-size: 1.125rem;
         }
       }
     }
   }
+
   #hero {
-    height: 400px;
-    padding-top: 80px;
+    height: 25rem;
+    padding-top: 5rem;
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     p {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
 
   #features {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    /* row-gap: 20px; */
+    row-gap: 2.5rem;
     .feature-image,
     .feature-description {
-      height: 300px;
+      height: auto;
+    }
+    .feature-image img {
+      height: 18.75rem;
     }
   }
 
   .testimonials-container {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
   }
 
   #gallery {
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
       img {
-        height: 180px;
+        height: 11.25rem;
       }
     }
   }
 
   #footer {
     .footer-nav {
-      gap: 18px;
-      font-size: 1rem;
+      gap: 1.125rem;
     }
     .footer-social {
-      gap: 14px;
+      gap: 0.875rem;
     }
     .footer-logo {
       font-size: 1.5rem;
@@ -328,35 +311,36 @@ header {
   }
 }
 
-/* Pantallas pequeñas: apila logo y navbar */
+/* PANTALLAS PEQUEÑAS */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
-    padding: 5px;
+    padding: 0.3125rem;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 0.3125rem;
+
     .logo {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     .navbar {
       ul {
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        gap: 0.3125rem;
         padding-left: 0;
-      }
-      a {
-        margin-right: 0;
-        font-size: 14px;
+
+        a {
+          font-size: 0.875rem;
+        }
       }
     }
   }
 
   #hero {
-    height: 350px;
-    /* Aumenta el padding-top para compensar la altura del header de dos líneas */
-    padding-top: 150px;
+    height: 18.75rem;
+    padding-top: 9.375rem;
+
     h2 {
       font-size: 1.8rem;
     }
@@ -366,28 +350,30 @@ header {
   }
 
   #features {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; /* eliminamos la altura fija en las filas */
-
-    .feature-description {
-      height: auto;
-    }
-
+    .feature-description,
     .feature-image {
       height: auto;
-      img {
-        height: 300px;
-      }
+    }
+    .feature-image img {
+      height: 12.5rem;
     }
   }
 
   #gallery {
     .gallery-grid {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 140px);
       img {
-        height: 140px;
+        height: 8.75rem;
       }
+    }
+  }
+
+  #footer {
+    padding: 2rem 1rem;
+    gap: 1rem;
+
+    .footer-nav {
+      flex-direction: column;
     }
   }
 }

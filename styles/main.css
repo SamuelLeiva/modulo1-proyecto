@@ -1,17 +1,46 @@
 :root {
-    --primary-color: #d2691e;      /* Marrón cálido, panadería */
-    --secondary-color: #fff3e0;    /* Beige claro, fondo suave */
-    --accent-color: #a0522d;       /* Marrón oscuro, detalles */
-    --text-color: #5c3a1b;         /* Marrón para texto */
-    --background-color: #fff8f0;   /* Fondo general */
-    --font-family: 'Montserrat', Arial, sans-serif;
-    --font-size: 16px;
-    --radius: 1rem;
-    --shadow: 0 2px 8px rgba(210, 105, 30, 0.08);
+  --primary-color: #d2691e; /* Marrón cálido para fondo del header  */
+  --secondary-color: #fff3e0; /* Beige claro, fondo de secciones y hover de links */
+  --accent-color: #a0522d; /* Marrón oscuro, para el color principal del texto */
+  --link-color: #fff; /* Color blanco para los enlaces del header y footer */
+  --background-color: #fff8f0; /* Fondo general de la página */
+  --font-family: "Montserrat", Arial, sans-serif;
+  --logo-font: "Pacifico", cursive;
+  --base-font-size: 16px; /* Tamaño de fuente base */
+  --radius: 1rem;
+  --shadow: 0 2px 8px rgba(210, 105, 30, 0.08);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  /* Usa la base del tamaño de fuente para rems */
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--logo-font);
+  color: var(--accent-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
 }
