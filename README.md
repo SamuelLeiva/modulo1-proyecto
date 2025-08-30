@@ -38,15 +38,16 @@ Landing Page de una panadería. Esta página está desarrollada con HTML5 semán
 ## Decisiones técnicas clave
 
 - **Paleta de colores y tipografía**
-  La selección de colores (marrón, beige, blanco) y fuentes (Pacifico y Montserrat) es fundamental para establecer la identidad de la marca. Pacifico se utiliza para títulos y logos, evocando un estilo artesanal y amigable, mientras que Montserrat ofrece una tipografía limpia y legible para el cuerpo del texto.
+  - La selección de colores (marrón, beige, blanco) y fuentes (Pacifico y Montserrat) es fundamental para establecer la identidad de la marca.
+  - Pacifico se utiliza para títulos y logos, evocando un estilo artesanal y amigable, mientras que Montserrat ofrece una tipografía limpia y legible para el cuerpo del texto.
 
 - **Unidades de medidas responsivas**
-  El uso de rem y em en lugar de px. Esto asegura que el diseño no se rompa en diferentes dispositivos y que la página sea accesible para personas que necesitan cambiar el tamaño de la fuente en su navegador. Esta flexibilidad es un pilar del diseño web moderno.
+  - El uso de rem y em en lugar de px. Esto asegura que el diseño no se rompa en diferentes dispositivos y que la página sea accesible para personas que necesitan cambiar el tamaño de la fuente en su navegador. Esta flexibilidad es un pilar del diseño web moderno.
 
 - **Disposición de las secciones features y gallery**
-  El uso de CSS Grid (display: grid) para la sección de características y la galería simplifica el diseño de la página y su adaptación a diferentes tamaños de pantalla. La propiedad display: contents; se utiliza para que los elementos hijos se comporten como si estuvieran directamente dentro de la cuadrícula, permitiendo un control más preciso del diseño.
+  - El uso de CSS Grid (display: grid) para la sección de características y la galería simplifica el diseño de la página y su adaptación a diferentes tamaños de pantalla. La propiedad display: contents; se utiliza para que los elementos hijos se comporten como si estuvieran directamente dentro de la cuadrícula, permitiendo un control más preciso del diseño.
 
 - **Uso de propiedades específicas clave**
-  El uso de backdrop-filter: blur(8px) le da un efecto de transparencia al área detrás del header.
-  El uso de la propiedad background-blend-mode: multiply hace que el color del fondo y la imagen se multipliquen, lo que le da un efecto oscurecido.
-  El uso de overflow: hidden y object-fit: cover en las secciones features, testimonials y gallery hace que las imágenes no se desborden del contenedor y se ajusten al tamaño de este.
+  - El uso de backdrop-filter: blur(8px) le da un efecto de transparencia al área detrás del header.
+  - El uso de la propiedad background-blend-mode: multiply hace que el color del fondo y la imagen se multipliquen, lo que le da un efecto oscurecido.
+  - El uso de overflow: hidden y object-fit: cover en las secciones features, testimonials y gallery hace que las imágenes no se desborden del contenedor y se ajusten al tamaño de este.
